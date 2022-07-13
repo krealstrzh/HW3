@@ -21,7 +21,7 @@ public class Main {
             System.out.println("Установите lite-версию для Android по ссылке ");
         }
         // Задание 3
-        int year = 2000;
+        int year = 1700;
         int gapYear = year % 4;
         int hundgeYear = year % 100;
         int fourHundgeYear = year % 400;
@@ -36,11 +36,12 @@ public class Main {
         }
         // Задание 4
         int deliveryDistance = 141;
-        int daysToDeliver = ((deliveryDistance - 20) / 40) + 2;
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется 1 день");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 100) {
-            System.out.println("Потребуется " + daysToDeliver + " дня");
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            System.out.println("Потребуется 2 дня");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется 3 дня");
         } else {
             System.out.println("К сожалению, мы не доставляем так далеко :(");
         }
@@ -51,14 +52,17 @@ public class Main {
             case 2:
             case 12:
                 System.out.println("Зима");
+                break;
             case 3:
             case 4:
             case 5:
                 System.out.println("Весна");
+                break;
             case 6:
             case 7:
             case 8:
                 System.out.println("Лето");
+                break;
             case 9:
             case 10:
             case 11:
