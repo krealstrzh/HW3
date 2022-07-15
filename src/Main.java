@@ -71,5 +71,44 @@ public class Main {
             default:
                 System.out.println("В земном календаре 12 месяцев");
         }
+        // Задание 6
+        int age = 20;
+        double salary = 90_000;
+        double creditLimit;
+        if (age >= 23) {
+            creditLimit = salary * 3;
+        } else {
+            creditLimit = salary * 2;
+        }
+        if (salary >= 50_000 && salary < 80_000) {
+            creditLimit = creditLimit * 1.2;
+        }else if (salary >= 80_000) {
+            creditLimit = creditLimit * 1.5;
+        }
+        System.out.println("Мы готовы выдать Вам кредитную карту с лимитом " + creditLimit + " рублей");
+        //Задание 7
+        int ageA = 20;
+        double salaryA = 150_000;
+        double wantedSum = 30_000;
+        double creditRate = 10;
+        double maxPart = 50;
+        if (ageA < 30 && ageA >= 23) {
+            creditRate = creditRate + 0.5;
+        } else if (ageA < 23) {
+            creditRate = creditRate + 1;
+        }
+        if (salaryA >= 80_000) {
+            creditRate = creditRate - 0.7;
+        }
+        System.out.println("Ставка кредитования -- " + creditRate + "%");
+        double sumToPay = (wantedSum * creditRate / 100) + wantedSum;
+        double payPerMonth = sumToPay / 12;
+        double maxPayPerMonth = salaryA * maxPart / 100;
+        System.out.println("Максимальный платеж при з/п " + salaryA + " равен " + maxPayPerMonth + " рублей. Платеж по кредиту -- " + payPerMonth + " рублей." );
+        if (payPerMonth <= maxPayPerMonth) {
+            System.out.println("Кредит одобрен!");
+        } else {
+            System.out.println("Заявка отклонена :(");
+        }
     }
 }
